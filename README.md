@@ -40,7 +40,7 @@ pour consolider des acquis et découvrir de nouveaux concepts.
 
 Le projet suit une architecture en couches :
 
-\`\`\`
+```
 com.library
 ├── domain        ← Entités métier (records, enums)
 ├── repository    ← Interfaces d'accès aux données
@@ -48,7 +48,7 @@ com.library
 ├── service       ← Logique métier
 ├── ui            ← Interface utilisateur (console pour la V1)
 └── Main.java     ← Point d'entrée
-\`\`\`
+```
 
 Chaque couche ne dépend que de la couche inférieure, via des interfaces.
 Cela permet de remplacer une implémentation (ex: mémoire → PostgreSQL)
@@ -56,13 +56,13 @@ sans toucher au reste du code.
 
 ## Comment lancer
 
-\`\`\`bash
+```bash
 mvn clean compile
 mvn exec:java -Dexec.mainClass="com.library.Main"
-\`\`\`
+```
 
 ## Comment tester
 
-\`\`\`bash
+```bash
 mvn test
-\`\`\`
+```
